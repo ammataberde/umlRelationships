@@ -12,11 +12,24 @@ class Student(Person):
         return f"{self.name} is studying"
 
 
-#testing inherited features and the new study() method
+class Teacher(Person):
+    def teach(self):
+        return f"{self.name} is teaching"
+
+
+#Exercise 3
 student1 = Student("Lina", 20)
 print(f"Name: {student1.name}")
 print(f"Age: {student1.get_age()}")
 print(student1.study())
 
-#reflection: Accessing __age through get_age() protects the data from accidental
-#or unauthorized changes (encapsulation) while still allowing safe, controlled read access.
+print()
+
+#Exercise 4
+teacher1 = Teacher("Mona", 30)
+print(f"Name: {teacher1.name}")
+print(f"Age: {teacher1.get_age()}")
+print(teacher1.teach())
+
+# Reflection: Accessing __age through get_age() protects the data from accidental
+# or unauthorized changes (encapsulation) while still allowing safe, controlled read access.
